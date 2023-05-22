@@ -1,0 +1,20 @@
+{
+    "tables": [
+        {
+            "name":"versions",
+            "def":"CREATE TABLE versions( id INTEGER PRIMARY KEY, version TEXT NOT NULL);" 
+        },
+        {
+            "name":"jobs",
+            "def":"CREATE TABLE jobs ( id INTEGER PRIMARY KEY, frequency INTEGER, type TEXT, attempts INTEGER, maxattempt INTEGER, status TEXT);"
+        },
+        {
+            "name": "artifacts",
+            "def": "CREATE TABLE artifacts (id INTEGER PRIMARY KEY, type TEXT, discover_definition TEXT);"
+        },
+        {
+            "name": "artifact_jobs",
+            "def": "CREATE TABLE artifact_jobs (id INTEGER PRIMARY KEY, artifact_id INTEGER, job_def TEXT NOT NULL)"
+        }
+    ]
+}
